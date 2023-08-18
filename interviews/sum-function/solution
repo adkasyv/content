@@ -1,0 +1,11 @@
+function sumCount(...args) {
+  //принимаем аргументы и сразу превращаем их в массив c помощью 'Spread syntax'
+  let result = [...args].reduce((a, b) => a + b)
+  //перебираем наш массив '...args' с помощью методы 'reduce'
+  //конкатенация сработает по правилам JS
+  return result;
+}
+
+sumCount(1,2,5) => 8
+sumCount(1,2,'5') => '35'
+sumCount('1',2,5) => '125'
